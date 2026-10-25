@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Historia i epoki | BUSHIDO — Japonia Samurajów</title>
+<!-- Tailwind CSS CDN -->
+<!-- Google Fonts: Cinzel, Noto Serif JP, Inter -->
+<!-- FontAwesome Icons -->
+<link href="assets/tailwind-local.css" rel="stylesheet"/><link href="assets/style.css" rel="stylesheet"/><meta content="Historia i epoki: edukacyjna strona o historii, wojownikach i kulturze dawnej Japonii." name="description"/><meta content="#101319" name="theme-color"/></head><body class="washi-pattern antialiased selection:bg-samurai-red selection:text-white flex flex-col min-h-screen site-body"><a class="skip-link" href="#main-content">Przejdź do treści</a><canvas id="sakura-canvas"></canvas><header class="sticky top-0 z-50 bg-samurai-bg/95 backdrop-blur-md border-b border-white/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center space-x-3 group" href="index.html">
+<span class="w-10 h-10 rounded-lg bg-gradient-to-br from-samurai-red to-samurai-crimson flex items-center justify-center text-white font-jp font-extrabold text-xl shadow-lg shadow-samurai-red/30 group-hover:scale-105 transition-transform">武</span>
+<div>
+<span class="font-cinzel text-xl font-bold tracking-widest text-white block">BUSHI<span class="text-samurai-red">DO</span></span>
+<span class="text-[10px] tracking-widest text-samurai-gold uppercase block -mt-1 font-cinzel">Japonia Samurajów</span>
+</div>
+</a>
+<!-- Desktop Links -->
+<nav class="hidden xl:flex space-x-1 font-cinzel text-xs font-semibold tracking-wider desktop-nav">
+<a class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-text hover:text-samurai-gold hover:bg-white/5 inline-flex items-center" href="index.html" id="nav-home">Główna</a>
+<a class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-gold border border-samurai-gold/30 hover:bg-samurai-gold/20 flex items-center gap-1.5 inline-flex items-center" href="presentation.html" id="nav-presentation"><svg aria-hidden="true" class="site-icon text-[10px]" fill="currentColor" focusable="false" height="1em" viewBox="0 0 384 512" width="1em"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg> Prezentacja (15 Slajdów)</a>
+<a class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-text hover:text-samurai-gold hover:bg-white/5 flex items-center gap-1.5 inline-flex items-center" href="popculture.html" id="nav-popculture"><svg aria-hidden="true" class="site-icon text-[10px] text-samurai-red" fill="currentColor" focusable="false" height="1em" viewBox="0 0 512 512" width="1em"><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM48 368l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 240l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 112l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16L64 96c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM160 128l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32L192 96c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-128 0z"></path></svg> Popkultura</a>
+<a aria-current="page" class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-text hover:text-samurai-gold hover:bg-white/5 inline-flex items-center nav-current font-bold" href="history.html" id="nav-history">Historia &amp; Ery</a>
+<a class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-text hover:text-samurai-gold hover:bg-white/5 inline-flex items-center" href="bushido.html" id="nav-bushido">Kodeks Bushidō</a>
+<a class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-text hover:text-samurai-gold hover:bg-white/5 inline-flex items-center" href="arsenal.html" id="nav-arsenal">Uzbrojenie</a>
+<a class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-text hover:text-samurai-gold hover:bg-white/5 inline-flex items-center" href="warriors.html" id="nav-warriors">Postacie</a>
+<a class="nav-btn px-3 py-2 rounded-md transition-all text-samurai-text hover:text-samurai-gold hover:bg-white/5 inline-flex items-center" href="culture.html" id="nav-culture">Kultura</a>
+</nav>
+<!-- Sakura Toggle & Mobile Menu Switcher -->
+<div class="flex items-center space-x-3">
+<button aria-label="Włącz lub wyłącz spadające płatki sakury" aria-pressed="true" class="p-2 rounded-md bg-samurai-card border border-white/10 text-samurai-gold hover:text-white hover:border-samurai-gold/50 transition-all text-xs flex items-center gap-2" id="toggle-sakura" title="Przełącz animację wiśni">
+<svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 512 512" width="1em"><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5l88 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0-72 0s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440l0 16c0 13.3 10.7 24 24 24s24-10.7 24-24l0-16c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"></path></svg>
+<span class="hidden sm:inline text-[11px] font-cinzel">Sakura: ON</span>
+</button>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Otwórz menu" class="xl:hidden text-2xl text-white focus:outline-none p-2 rounded-md bg-samurai-card border border-white/10 menu-toggle" id="mobile-menu-btn">
+<svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 448 512" width="1em"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
+</button>
+</div>
+</div>
+<!-- Mobile Drawer -->
+<div class="hidden xl:hidden bg-samurai-card border-b border-white/10 px-6 py-4 space-y-2 font-cinzel text-sm" id="mobile-menu">
+<a class="block w-full text-left text-samurai-text hover:text-samurai-gold py-2 border-b border-white/5 inline-flex items-center" href="index.html">Strona Główna</a>
+<a class="block w-full text-left text-samurai-gold py-2 border-b border-white/5 inline-flex items-center" href="presentation.html"><svg aria-hidden="true" class="site-icon text-xs mr-2" fill="currentColor" focusable="false" height="1em" viewBox="0 0 384 512" width="1em"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg>Interaktywna Prezentacja (15 Slajdów)</a>
+<a class="block w-full text-left text-samurai-red py-2 border-b border-white/5 inline-flex items-center" href="popculture.html"><svg aria-hidden="true" class="site-icon text-xs mr-2" fill="currentColor" focusable="false" height="1em" viewBox="0 0 512 512" width="1em"><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM48 368l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 240l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 112l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16L64 96c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM160 128l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32L192 96c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-128 0z"></path></svg>Popkultura (Gry, Filmy, Seriale)</a>
+<a aria-current="page" class="block w-full text-left text-samurai-text hover:text-samurai-gold py-2 border-b border-white/5 inline-flex items-center nav-current font-bold" href="history.html">Historia i Ery</a>
+<a class="block w-full text-left text-samurai-text hover:text-samurai-gold py-2 border-b border-white/5 inline-flex items-center" href="bushido.html">Kodeks Bushidō</a>
+<a class="block w-full text-left text-samurai-text hover:text-samurai-gold py-2 border-b border-white/5 inline-flex items-center" href="arsenal.html">Broń i Uzbrojenie</a>
+<a class="block w-full text-left text-samurai-text hover:text-samurai-gold py-2 border-b border-white/5 inline-flex items-center" href="warriors.html">Legendarne Postacie</a>
+<a class="block w-full text-left text-samurai-text hover:text-samurai-gold py-2 inline-flex items-center" href="culture.html">Kultura i Życie</a>
+</div>
+</header><div class="bg-samurai-darkPaper border-b border-white/5 py-2.5 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto flex items-center justify-between text-xs font-cinzel text-samurai-muted">
+<div class="flex items-center space-x-2">
+<svg aria-hidden="true" class="site-icon text-samurai-red" fill="currentColor" focusable="false" height="1em" viewBox="0 0 512 512" width="1em"><path d="M0 80c0 26.5 21.5 48 48 48l16 0 0 64 64 0 0-64 96 0 0 64 64 0 0-64 96 0 0 64 64 0 0-64 16 0c26.5 0 48-21.5 48-48l0-66.6C512 6 506 0 498.6 0c-1.7 0-3.4 .3-5 1l-49 19.6C425.7 28.1 405.5 32 385.2 32L126.8 32c-20.4 0-40.5-3.9-59.4-11.4L18.4 1c-1.6-.6-3.3-1-5-1C6 0 0 6 0 13.4L0 80zM64 288l0 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-192 256 0 0 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-192 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0z"></path></svg>
+<span>Japonia Samurajów</span>
+<span>/</span>
+<span class="text-samurai-gold font-semibold" id="breadcrumb-current">Historia i epoki</span>
+</div>
+<div class="hidden sm:block text-[11px] text-white/40" id="page-time-indicator">
+                Sengoku (1467–1603) &amp; Edo (1603–1867) Era
+            </div>
+</div>
+</div><main class="flex-grow relative" id="main-content"><section class="page-view max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 active-view" id="view-history">
+<div class="kanji-watermark top-10 right-10 text-[200px]">歴史</div>
+<div class="mb-12">
+<span class="text-samurai-gold font-cinzel text-xs uppercase tracking-widest block">Chronologia Dziejów</span>
+<h1 class="font-cinzel text-3xl sm:text-5xl font-black text-white mt-1">Ewolucja Stanu Samurajskiego</h1>
+<p class="text-samurai-muted text-sm mt-3 max-w-3xl leading-relaxed">
+                    Od konnych łuczników cesarskich po zjednoczone imperium pod absolutną władzą szogunów.
+                </p>
+</div><div class="page-photo-banner"><figure class="feature-photo feature-photo-1 reveal-on-scroll"><img alt="Wizualizacja zamku i dawnej architektury Japonii" decoding="async" loading="eager" src="assets/images/zamek-sakura.webp"/><figcaption>Wizualizacja zamku i dawnej architektury Japonii</figcaption></figure><figure class="feature-photo feature-photo-2 reveal-on-scroll"><img alt="Tradycyjna architektura historycznej Japonii" decoding="async" loading="lazy" src="assets/images/palac-edo.webp"/><figcaption>Tradycyjna architektura historycznej Japonii</figcaption></figure></div>
+<!-- Interaktywny Timeline -->
+<div class="relative border-l-2 border-samurai-gold/30 ml-4 sm:ml-36 space-y-12">
+<div class="relative pl-6 sm:pl-10">
+<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-samurai-gold border-4 border-samurai-bg"></div>
+<div class="hidden sm:block absolute -left-36 top-1 font-cinzel text-xs font-bold text-samurai-gold">1185 – 1333</div>
+<div class="bg-samurai-card p-6 rounded-2xl border border-white/5">
+<h3 class="font-cinzel text-xl font-bold text-white mb-2">Epoka Kamakura (鎌倉時代)</h3>
+<p class="text-samurai-muted text-sm leading-relaxed mb-4">Minamoto no Yoritomo tworzy pierwszy bakufu. W latach 1274 i 1281 samuraje odpierają inwazje Mongolskie pod wodzą Kubilaj-chana dzięki tajfunom <em>Kamikaze</em>.</p>
+<div class="study-note reveal-on-scroll"><span class="study-note-title"><svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 576 512" width="1em"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z"></path></svg> Rząd wojskowy</span><p>Rząd w Kamakurze opierał się na więziach lojalności wojowników i zarządzaniu ziemią. Pod koniec XIII wieku koszty obrony przed Mongołami zwiększyły napięcia wewnątrz systemu.</p></div></div>
+</div>
+<div class="relative pl-6 sm:pl-10">
+<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-samurai-red border-4 border-samurai-bg"></div>
+<div class="hidden sm:block absolute -left-36 top-1 font-cinzel text-xs font-bold text-samurai-red">1467 – 1603</div>
+<div class="bg-samurai-card p-6 rounded-2xl border border-white/5 border-l-2 border-l-samurai-red">
+<h3 class="font-cinzel text-xl font-bold text-white mb-2">Sengoku Jidai: Era Krajów w Wojnie (戦国時代)</h3>
+<p class="text-samurai-muted text-sm leading-relaxed mb-4">Bezwzględne walki daimyō o terytorium. Pojawienie się broni palnej Tanegashima oraz kampanie Trzech Zjednoczycieli: Ody Nobunagi, Toyotomiego Hideyoshiego i Tokugawy Ieyasu.</p>
+<div class="study-note reveal-on-scroll"><span class="study-note-title"><svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 576 512" width="1em"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z"></path></svg> Rywalizacja rodów</span><p>Lokalni władcy umacniali własne twierdze i armie. Rozwój handlu oraz pojawienie się broni palnej wpływały na sposób organizowania państwa i prowadzenia kampanii.</p></div></div>
+</div>
+<div class="relative pl-6 sm:pl-10">
+<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-samurai-gold border-4 border-samurai-bg"></div>
+<div class="hidden sm:block absolute -left-36 top-1 font-cinzel text-xs font-bold text-samurai-gold">1603 – 1867</div>
+<div class="bg-samurai-card p-6 rounded-2xl border border-white/5">
+<h3 class="font-cinzel text-xl font-bold text-white mb-2">Epoka Edo: Pax Tokugawa (江戸時代)</h3>
+<p class="text-samurai-muted text-sm leading-relaxed mb-4">250 lat pokoju. Japonia zamyka granice (Sakoku). Samuraje przekształcają się w wykształconych urzędników i filozofów.</p>
+<div class="study-note reveal-on-scroll"><span class="study-note-title"><svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 576 512" width="1em"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z"></path></svg> Pokój i urbanizacja</span><p>W epoce Edo powstawały wielkie ośrodki miejskie, a samuraje często pełnili funkcje urzędnicze. Japonia utrzymywała kontrolowane kontakty handlowe mimo ograniczeń podróży.</p></div></div>
+</div>
+</div>
+<div class="content-section reveal-on-scroll"><div class="section-kicker">Szersze tło</div><h2 class="section-heading">Wydarzenia przed i po epoce wojowników</h2>
+<div class="topic-grid"><article class="topic-card reveal-on-scroll"><span class="font-jp text-2xl text-samurai-gold block mb-3">平安</span><h3>Heian (794–1185)</h3><p>Rozwój kultury arystokratycznej oraz powstawanie regionalnych oddziałów wojowników.</p><p class="extended-description">Właściciele posiadłości coraz częściej powierzali ochronę ziemi lokalnym rodom zbrojnym, które z czasem zaczęły rywalizować o władzę.</p></article><article class="topic-card reveal-on-scroll"><span class="font-jp text-2xl text-samurai-gold block mb-3">室町</span><h3>Muromachi (1336–1573)</h3><p>Szogunat Ashikaga w Kioto i narastająca samodzielność możnych.</p><p class="extended-description">To właśnie kryzys centralnej władzy w XV wieku otworzył drogę do długotrwałej epoki wojen domowych i wzrostu znaczenia daimyō.</p></article><article class="topic-card reveal-on-scroll"><span class="font-jp text-2xl text-samurai-gold block mb-3">明治</span><h3>Meiji (od 1868)</h3><p>Modernizacja państwa i stopniowe odejście od dawnych przywilejów stanowych.</p><p class="extended-description">Powstała armia poborowa, zmieniono administrację i system edukacji. Byli samuraje odnajdywali się w nowych zawodach i instytucjach.</p></article></div></div><div class="related-nav"><h2>Odkryj również</h2><div class="related-links"><a class="related-link" href="warriors.html">Postacie <svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 448 512" width="1em"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a><a class="related-link" href="bushido.html">Kodeks bushidō <svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 448 512" width="1em"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a><a class="related-link" href="arsenal.html">Uzbrojenie <svg aria-hidden="true" class="site-icon" fill="currentColor" focusable="false" height="1em" viewBox="0 0 448 512" width="1em"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a></div></div></section></main><footer class="bg-black border-t border-white/10 py-12 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+<div class="flex justify-center items-center space-x-3">
+<span class="w-8 h-8 rounded bg-samurai-red flex items-center justify-center text-white font-jp font-bold text-sm">武</span>
+<span class="font-cinzel text-lg font-bold tracking-widest text-white">BUSHIDO PORTAL</span>
+</div>
+<p class="font-jp text-xs text-samurai-muted max-w-2xl mx-auto italic leading-relaxed">
+                "Ucz się tak, jakbyś miał żyć wiecznie; żyj tak, jakbyś miał umrzeć jutro." — Mądrość samurajska
+            </p>
+<div class="text-[11px] font-cinzel text-samurai-muted pt-6 border-t border-white/5">
+                © 2026 Japonia w czasach Samurajów. Projekt edukacyjno-kulturowy.
+            </div>
+</div>
+</footer><script defer="True" src="assets/app.js"></script><button aria-label="Wróć na początek strony" class="back-to-top" id="back-to-top" title="Wróć na górę" type="button">↑</button><div aria-hidden="true" id="scroll-progress"></div></body></html>
